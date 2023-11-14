@@ -5,7 +5,7 @@ void App::menuJugador()
   cout << "Estas en el lobby [L], tienes dos caminos: izquierda[N] y derecha[B]"
     " El cuarto esta totalmente vacio, la atmosfera esta bastante calido" << endl;
 
-  while (accion != 'T')
+  while (jugador.combateOcurridoEnHabitacion != true)
   {
     cout << "           J--------F---------A---------P" << endl;
     cout << "           | " << endl;

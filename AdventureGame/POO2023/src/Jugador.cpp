@@ -16,101 +16,101 @@ void Jugador::movimientoPersonaje(char _accion)
 
   if (_accion == 'S')
   {
-    columnaActual--;
-    if (columnaActual < 1) {
+    m_columnaActual--;
+    if (m_columnaActual < 1) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 1 && columnaActual == 2) {
+    else if (m_filaActual == 1 && m_columnaActual == 2) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
      
     }
-    else if (filaActual == 1 && columnaActual == 3) {
+    else if (m_filaActual == 1 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 2 && columnaActual == 3) {
+    else if (m_filaActual == 2 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
     else {
-      room.creacionCuarto(filaActual, columnaActual);
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
   }
   else if (_accion == 'W') {
-    columnaActual++;
-    if (columnaActual > 4) {
+    m_columnaActual++;
+    if (m_columnaActual > 4) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 2 && columnaActual == 2 && verificarItem < 1) {
+    else if (m_filaActual == 2 && m_columnaActual == 2 && verificarItem < 1) {
       cout << "Parece que esta cerrada la puerta de este cuarto, pero tiene una cerradura" << endl;
       cout << "Que raro..." << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
-    else if (filaActual == 0 && columnaActual == 2 && verificarItem < 3) {
+    else if (m_filaActual == 0 && m_columnaActual == 2 && verificarItem < 3) {
       cout << "Parece que esta cerrada la puerta de este cuarto, pero tiene una cerradura" << endl;
       cout << "Que raro..." << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
-    else if (filaActual == 0 && columnaActual == 3 && verificarItem < 4) {
+    else if (m_filaActual == 0 && m_columnaActual == 3 && verificarItem < 4) {
       cout << "Parece que esta cerrada la puerta de este cuarto, pero tiene una cerradura" << endl;
       cout << "Que raro..." << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
-    else if (filaActual == 1 && columnaActual == 2) {
+    else if (m_filaActual == 1 && m_columnaActual == 2) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 1 && columnaActual == 3) {
+    else if (m_filaActual == 1 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 2 && columnaActual == 3) {
+    else if (m_filaActual == 2 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      columnaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_columnaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
     else {
-      room.creacionCuarto(filaActual, columnaActual);
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
   }
   else if (_accion == 'A') {
-    filaActual--;
-    if (filaActual < 0) {
+    m_filaActual--;
+    if (m_filaActual < 0) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 0 && columnaActual == 1 && verificarItem < 2) {
-      cout << "Intentaste pasara por este cuarto, pero un enemigo te intento atacar" << endl;
+    else if (m_filaActual == 0 && m_columnaActual == 1 && verificarItem < 2) {
+      cout << "Intentaste pasara por este cuarto, pero un mosco te intento atacar" << endl;
       cout << "Corriste rapido y cerraste la puerta, debes buscar algo con que atacarlo" << endl;
-      filaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
     }
     /*else if (filaActual == 0 && columnaActual == 0 && verificarItem < 5) {
       cout << "Parece que esta cerrada la puerta de este cuarto, pero tiene una cerradura" << endl;
@@ -118,103 +118,103 @@ void Jugador::movimientoPersonaje(char _accion)
       filaActual++;
       room.creacionCuarto(filaActual, columnaActual);
     }*/
-    else if (filaActual == 1 && columnaActual == 2) {
+    else if (m_filaActual == 1 && m_columnaActual == 2) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 1 && columnaActual == 3) {
+    else if (m_filaActual == 1 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 2 && columnaActual == 3) {
+    else if (m_filaActual == 2 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual++;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual++;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
     else {
-      room.creacionCuarto(filaActual, columnaActual);
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
   }
   else if (_accion == 'D') {
-    filaActual++;
-    if (filaActual > 3) {
+    m_filaActual++;
+    if (m_filaActual > 3) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     } 
-    else if (filaActual == 1 && columnaActual == 4 && verificarItem < 5) {
+    else if (m_filaActual == 1 && m_columnaActual == 4 && verificarItem < 5) {
       cout << "No puedes avanzar aqui, debes de responder la pregunta" << endl;
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
-    else if (filaActual == 2 && columnaActual == 4 && verificarItem < 6) {
+    else if (m_filaActual == 2 && m_columnaActual == 4 && verificarItem < 6) {
       cout << "No puedes avanzar aqui, debes de responder la pregunta" << endl;
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
-    else if (filaActual == 3 && columnaActual == 4 && verificarItem == 7) {
+    else if (m_filaActual == 3 && m_columnaActual == 4 && combateOcurridoEnHabitacion == false &&verificarItem < 7) {
       cout << "Entraste a la habitacion, una oveja gigante se presenta" << endl;
       cout << "Ves que la oveja tiene tu patito cuack cuak y decides atacar" << endl;
       cout << "Tu espada actual no es suficiente, decides huir y cerrar rapido la puerta" << endl;
       cout << "Creo que debes encontrar algo mas fuerte para vencerlo" << endl;
-        // Iniciar el combate
+        
       while (enemigo->getHealth() > 0 && getHealth() > 0)
       {
-        // Turno del jugador
+        
         attack(enemigo);
 
-        // Verificar si el enemigo está derrotado
+        
         if (enemigo->getHealth() <= 0)
         {
           cout << "Has derrotado al " << enemigo->getName() << ". ¡Enhorabuena!" << endl;
-          // Puedes agregar lógica adicional aquí, como recompensas, etc.
-          break;  // Salir del bucle de combate
+          combateOcurridoEnHabitacion = true;
+          room.creacionCuarto(m_filaActual, m_columnaActual);
+          break;
         }
 
-        // Turno del enemigo
         enemigo->attack(this);
 
-        // Verificar si el jugador ha sido derrotado
+       
         if (getHealth() <= 0)
         {
           cout << "¡Has sido derrotado! Fin del juego." << endl;
-          // Puedes agregar más lógica aquí, como reiniciar el juego, etc.
-          break;  // Salir del bucle de combate
+          
+          break;
         }
       }
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
-    else if (filaActual == 1 && columnaActual == 2) {
+    else if (m_filaActual == 1 && m_columnaActual == 2) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 1 && columnaActual == 3) {
+    else if (m_filaActual == 1 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
-    else if (filaActual == 2 && columnaActual == 3) {
+    else if (m_filaActual == 2 && m_columnaActual == 3) {
       cout << "No puedes avanzar aqui" << endl;
-      filaActual--;
-      room.creacionCuarto(filaActual, columnaActual);
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
     else {
-      room.creacionCuarto(filaActual, columnaActual);
+      room.creacionCuarto(m_filaActual, m_columnaActual);
       
     }
   }
@@ -235,65 +235,69 @@ void Jugador::movimientoPersonaje(char _accion)
 
 void Jugador::inspeccionarCuarto(factoriaItem& factory)
 {
-  if (filaActual == 2 && columnaActual == 1 && verificarItem == 0) {
+  if (m_filaActual == 2 && m_columnaActual == 1 && verificarItem == 0) {
     item* nuevaLlaveR = factory.crearItem();
     nuevaLlaveR->descripcion();
     inventario.push_back("Llave para el cuarto R");
 
     verificarItem = verificarItem + 1;
   }
-  else if (filaActual == 2 && columnaActual == 2 && verificarItem == 1) {
+  else if (m_filaActual == 2 && m_columnaActual == 2 && verificarItem == 1) {
     item* nuevaEspada1 = factory.crearItem();
     nuevaEspada1->descripcion();
     inventario.push_back("Espada nvl: 1");
 
     verificarItem = verificarItem + 1;
   }
-  else if (filaActual == 0 && columnaActual == 1 && verificarItem == 2) {
+  else if (m_filaActual == 0 && m_columnaActual == 1 && verificarItem == 2) {
     item* nuevaLlaveO = factory.crearItem();
     nuevaLlaveO->descripcion();
     inventario.push_back("Llave para el cuarto O");
 
     verificarItem = verificarItem + 1;
   }
-  else if (filaActual == 0 && columnaActual == 2 && verificarItem == 3) {
+  else if (m_filaActual == 0 && m_columnaActual == 2 && verificarItem == 3) {
     item* nuevaLlaveH = factory.crearItem();
     nuevaLlaveH->descripcion();
+    cout << "El cuadro que viste se titula: El_beso. Curiosamente, tenia una llave" << endl;
     inventario.push_back("Llave para el cuarto H");
 
     verificarItem = verificarItem + 1;
   }
-  else if (filaActual == 0 && columnaActual == 4 && verificarItem == 4) {
-    cout << " Responde esta pregunta para pasar al siguiente cuarto " << endl;
-    cout << "QUe pasa si dos objetos se juntan " << endl;
+  else if (m_filaActual == 0 && m_columnaActual == 4 && verificarItem == 4) {
+    cout << " Recoges el cuaderno, dice: responde esta pregunta para pasar al siguiente cuarto " << endl;
+    cout << " Dame el nombre de un cuadro famoso, que yo solo conozco " << endl;
+    cout << " ... no tiene sentido " << endl;
 
-    cin >> respuesta;
-    if (respuesta == "Yes")
+    cin >> m_respuesta;
+    if (m_respuesta == "El_beso")
     {
       verificarItem = verificarItem + 1;
-      cout << "Puedes pasar al siguiente cuarto" << endl;
+      cout << "Puedes pasar al siguiente cuarto, le atinaste al cuarto" << endl;
+      cout << "Antes de irte, ves que el cuaderno le pertenece a un tal Gustav, pero de la nada, desaparece" << endl;
     }
     else {
       cout << "Una lastima, no respondiste bien" << endl;
     }
 
   }
-  else if (filaActual == 0 && columnaActual == 4 && verificarItem == 5) {
-    cout << " Responde esta pregunta para pasar al siguiente cuarto " << endl;
-    cout << "QUe pasa si dos objetos pepes se juntan " << endl;
+  else if (m_filaActual == 1 && m_columnaActual == 4 && verificarItem == 5) {
+    cout << " Recoges la hoja arrancada, dice: responde esta pregunta para pasar al siguiente cuarto " << endl;
+    cout << "Pero la hoja tiene la respuesta, aunque algo cortada alacanzas a leer (...tav) " << endl;
 
-    cin >> respuesta;
-    if (respuesta == "No")
+    cin >> m_respuesta;
+    if (m_respuesta == "Gustav")
     {
       verificarItem = verificarItem + 1;
-      cout << "Puedes pasar al siguiente cuarto" << endl;
+      cout << "Puedes pasar al siguiente cuarto, perfecto!" << endl;
+      cout << "Antes de irte, la nota dice algo sobre una arma que se puede combinar con otra..." << endl;
     }
     else {
       cout << "Una lastima, no respondiste bien" << endl;
     }
 
   }
-  else if (filaActual == 2 && columnaActual == 4 && verificarItem == 6) {
+  else if (m_filaActual == 2 && m_columnaActual == 4 && verificarItem == 6) {
     item* nuevaEspada2 = factory.crearItem();
     nuevaEspada2->descripcion();
     inventario.push_back("Espada nvl: 2");

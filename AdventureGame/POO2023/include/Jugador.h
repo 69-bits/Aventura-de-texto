@@ -1,5 +1,6 @@
 #include "Commons.h"
 #include "Cuarto.h"
+#include "Item.h"
 
 
 class Enemigo;
@@ -9,16 +10,16 @@ class Jugador
 private:
 	vector<string> inventario;
 	Enemigo* enemigo;
-	int filaActual = 1;
-	int columnaActual = 1;
-	int m_health = 100;
-	string respuesta;
-	bool combateOcurridoEnHabitacion = false;
+	int m_filaActual = 1;
+	int m_columnaActual = 1;
+	int m_salud = 100;
+	string m_respuesta;
 
 public:
 	Jugador();
 	~Jugador();
 	int verificarItem = 0;
+	bool combateOcurridoEnHabitacion = false;
 	Cuarto room;
 	ConcreteFactoriaLlave factory;
 	void movimientoPersonaje(char _accion);
@@ -28,10 +29,10 @@ public:
 		attack(Enemigo*& _e);
 	void
 		setHealth(int _h) {
-		m_health += _h;
+		m_salud += _h;
 	}
 	int getHealth() {
-		return m_health;
+		return m_salud;
 	}
 };
 

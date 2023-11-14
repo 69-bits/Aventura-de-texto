@@ -7,7 +7,7 @@ void Cuarto::creacionCuarto(int _fila, int _columna)
     " El cuarto esta totalmente vacio, la atmosfera esta bastante calido";
 
   Room[0][1] = "Te encuentras en el cuarto[N], tienes dos caminos: subir[O] y derecha[L]"
-    " El cuarto esta lleno de piedras en el suelo, incluso piensas que se ven falsas";
+    " El cuarto esta lleno de piedras en el suelo, incluso piensas que se ven falsas porque el mosco que mataste esta flotando en una de ellas";
 
   Room[2][1] = "Estas en el cuarto[B], tienes dos caminos: izquierda[L] y arriba[R]"
     " El cuarto solo contiene la funda de una llave, tirada en el suelo, suena inspeccionable";

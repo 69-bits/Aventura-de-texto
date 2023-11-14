@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="include\App.h" />
     <ClInclude Include="include\Enemigo.h" />
+    <ClInclude Include="include\Item.h" />
     <ClInclude Include="include\Jugador.h" />
     <ClInclude Include="include\Commons.h" />
     <ClInclude Include="include\Cuarto.h" />
