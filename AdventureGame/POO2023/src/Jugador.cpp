@@ -161,6 +161,12 @@ Jugador::movimientoPersonaje(char _accion){
       room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
+    else if (m_filaActual == 3 && m_columnaActual == 4 && m_verificarItem < 7) {
+      cout << "No puedes avanzar aqui, debes de responder la pregunta" << endl;
+      m_filaActual--;
+      room.creacionCuarto(m_filaActual, m_columnaActual);
+
+    }
     else if (m_filaActual == 3 && m_columnaActual == 4 && m_combateOcurridoEnHabitacion == false &&m_verificarItem == 7) {
       cout << "Entraste a la habitacion, una oveja gigante se presenta" << endl;
       cout << "Ves que la oveja tiene tu patito cuack cuak y decides atacar" << endl;
@@ -200,7 +206,6 @@ Jugador::movimientoPersonaje(char _accion){
           break;
         }
       }
-      room.creacionCuarto(m_filaActual, m_columnaActual);
 
     }
     else if (m_filaActual == 1 && m_columnaActual == 2) {
@@ -326,6 +331,7 @@ Jugador::attack(Enemigo*& _e){
     _e->setHealth(m_daño);
 
     cout << "El jugador ataco a " << _e->getName() << " y le resto " << m_daño << " puntos de vida" << endl;
+    cout << "El enemigo esta a " << _e->getHealth() << " de vida" << endl;
   }
   else{
     cout << "No hay nada a que atacar" << endl;
