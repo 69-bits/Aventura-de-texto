@@ -1,7 +1,8 @@
 #include "Commons.h"
 
-class Cuarto
-{
+class 
+  Cuarto{
 public:
-  void creacionCuarto(int _fila, int _columna);
+  void 
+    creacionCuarto(int _fila, int _columna);
 };

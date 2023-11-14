@@ -1,7 +1,7 @@
 #include "Cuarto.h"
 
-void Cuarto::creacionCuarto(int _fila, int _columna)
-{
+void 
+Cuarto::creacionCuarto(int _fila, int _columna){
   vector<vector<string>> Room(5, vector<string>(5, ""));
   Room[1][1] = "Estas en el lobby [L], tienes dos caminos: izquierda[N] y derecha[B]"
     " El cuarto esta totalmente vacio, la atmosfera esta bastante calido";

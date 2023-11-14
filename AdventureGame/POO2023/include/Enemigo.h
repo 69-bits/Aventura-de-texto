@@ -1,12 +1,13 @@
 #include "Commons.h"
 
-class Jugador;
+class 
+	Jugador;
 
-class Enemigo
-{
+class 
+	Enemigo{
 public:
 	Enemigo() = default;
-	Enemigo(string _name, int _health) :m_name(_name), m_health(_health) {};
+	Enemigo(string _name, int _health) :m_nombre(_name), m_salud(_health) {};
 	~Enemigo() = default;
 
 	void
@@ -14,19 +15,19 @@ public:
 
 	void
 		setHealth(int _h) {
-		m_health += _h;
+		m_salud += _h;
 	}
 
 	int getHealth() {
-		return m_health;
+		return m_salud;
 	}
 
 	string
 		getName() {
-		return m_name;
+		return m_nombre;
 	}
 
 private:
-	int m_health = 100;
-	string m_name;
+	int m_salud = 100;
+	string m_nombre;
 };

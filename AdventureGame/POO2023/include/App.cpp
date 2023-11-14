@@ -1,12 +1,11 @@
 ﻿#include "App.h"
 
-void App::menuJugador()
-{
+void 
+App::menuJugador(){
   cout << "Estas en el lobby [L], tienes dos caminos: izquierda[N] y derecha[B]"
     " El cuarto esta totalmente vacio, la atmosfera esta bastante calido" << endl;
 
-  while (jugador.combateOcurridoEnHabitacion != true)
-  {
+  while (jugador.m_combateOcurridoEnHabitacion != true){
     cout << "           J--------F---------A---------P" << endl;
     cout << "           | " << endl;
     cout << "           | " << endl;
@@ -29,5 +28,5 @@ void App::menuJugador()
 
   }
 
-  cout << "Puntaje final: " << jugador.verificarItem << endl;
+  cout << "Puntaje final: " << jugador.m_verificarItem << endl;
 }

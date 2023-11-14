@@ -3,27 +3,27 @@
 #include "Item.h"
 
 
-class Enemigo;
+class 
+	Enemigo;
 
-class Jugador
+class 
+	Jugador
 {
-private:
-	vector<string> inventario;
-	Enemigo* enemigo;
-	int m_filaActual = 1;
-	int m_columnaActual = 1;
-	int m_salud = 100;
-	string m_respuesta;
-
 public:
 	Jugador();
 	~Jugador();
-	int verificarItem = 0;
-	bool combateOcurridoEnHabitacion = false;
-	Cuarto room;
-	ConcreteFactoriaLlave factory;
-	void movimientoPersonaje(char _accion);
-	void inspeccionarCuarto(factoriaItem& factory);
+
+	int m_verificarItem = 0;
+	bool m_combateOcurridoEnHabitacion = false;
+
+	Cuarto 
+		room;
+	ConcreteFactoriaLlave 
+		factory;
+	void 
+		movimientoPersonaje(char _accion);
+	void 
+		inspeccionarCuarto(factoriaItem& factory);
 
 	void 
 		attack(Enemigo*& _e);
@@ -34,5 +34,14 @@ public:
 	int getHealth() {
 		return m_salud;
 	}
+private:
+	vector<string> inventario;
+	Enemigo* enemigo;
+	int m_filaActual = 1;
+	int m_columnaActual = 1;
+	int m_salud = 100;
+	char accionJugador;
+	string m_respuesta;
+
 };
 
