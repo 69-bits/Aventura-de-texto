@@ -1,8 +1,8 @@
 # AdventureGame
 
-¡Bienvenido a AdventureGame! Este es un emocionante juego de aventuras desarrollado en C++, donde te embarcarás en una misión para rescatar a tu patito, arrebatado por una oveja negra malvada. ¡Prepárate para explorar cuartos misteriosos, recoger valiosos items y enfrentarte a temibles enemigos en tu búsqueda épica!
+¡Bienvenido a AdventureGame! Este es un juego de texto desarrollado en C++, donde te embarcarás en una misión para rescatar a tu patito, arrebatado por una oveja negra malvada. ¡Prepárate para explorar cuartos misteriosos, recoger valiosos items y enfrentarte a temibles enemigos en tu búsqueda!
 
-## Instrucciones de Juego
+## Dentro del Juego...
 
 1. **Explora los Cuartos:** Navega a través de diversos cuartos llenos de desafíos y secretos. Utiliza comandos específicos para moverte y descubrir nuevos lugares.
 
@@ -14,7 +14,7 @@
 
 ## Realización
 
-Este juego ha sido desarrollado en C++. Explora el código fuente y contribuye con mejoras y nuevas características.
+Este juego ha sido desarrollado en C++. Puedes explorar el código y contribuir con mejoras y nuevas características.
 
 ---
 
